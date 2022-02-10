@@ -1,7 +1,7 @@
 # zzd chat app
 
 > recommended settings
->> django + sqlite3 //
+>> django + sqlite3 <br />
 >> django channels + redis
 
 ***
