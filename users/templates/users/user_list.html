@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}" />
+</head>
+<body>
+
+{% for user in users %}
+	<div class="user-card">
+		<div class="user-name">{{ user.username }}</div>
+		<div class="user-gender">
+			{% if user.profile.gender %}
+				male
+			{% else %}
+				female
+			{% endif %}
+		</div>
+		<div class="user-age">{{ user.profile.age }}</div>
+	</div>
+{% endfor %}
+
+<script type="text/javascript" src='{% static "js/index.js" %}'></script>
+</body>
+</html>
